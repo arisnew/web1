@@ -10,7 +10,8 @@ Just for trial web php and learn git.
 
 ## TODO
 - [x] Develop tampilan table & form Data User
-- [] Pembuatan Database & table (user)
+- [x] Pembuatan Database & table (user)
+    - [x] Test koneksi php-mysql
 - [] CRUD data user
 - [] Fungsi log in, log out
 
