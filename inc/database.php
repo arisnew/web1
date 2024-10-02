@@ -1,5 +1,5 @@
 <?php
-class database
+class Database
 {
 
     private $host = "127.0.0.1";
@@ -18,9 +18,9 @@ class database
         }
     }
 
-    function tampil_data()
+    function get_data_users()
     {
-        $data = $this->con->query("select * from users");
+        $data = $this->con->query("SELECT * FROM users");
         $hasil = [];
         while ($d = $data->fetch_assoc()) {
             $hasil[] = $d;
@@ -30,7 +30,10 @@ class database
 }
 
 
-// di coba disini
-$db = new database();
-$data = $db->tampil_data();
-var_dump($data);
+// misal, di coba disini
+// $db = new Database();
+// $data = $db->get_data_users();
+
+// echo '<pre>';
+// var_dump($data);
+// echo '</pre>';
