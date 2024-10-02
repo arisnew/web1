@@ -27,6 +27,14 @@ class Database
         }
         return $hasil;
     }
+
+    function get_single_data_user($id)
+    {
+        $id = (int) $id;
+        $data = $this->con->query("SELECT * FROM users WHERE id = $id");
+        $hasil = $data->fetch_array(MYSQLI_ASSOC);
+        return $hasil;
+    }
 }
 
 

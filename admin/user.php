@@ -42,7 +42,7 @@ $db = new Database();
                                 <td><?= $user['username'] ?></td>
                                 <td><?= $user['level'] ?></td>
                                 <td>
-                                    <a href="#" class="btn btn-primary">
+                                    <a href="edit-user.php?id=<?= $user['id'] ?>" class="btn btn-primary">
                                         <i class="fas fa-edit"></i>
                                     </a>
                                     
