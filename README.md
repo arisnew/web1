@@ -1,4 +1,5 @@
-# web1
+# Seri PHP Basic Banget
+---
 Just for trial web php and learn git.
 
 ## Part 1
@@ -8,12 +9,20 @@ Just for trial web php and learn git.
 - [x] Bootstrap
 - [x] Menggunakan template
 
-## TODO
+## Part 2
 - [x] Develop tampilan table & form Data User
 - [x] Pembuatan Database & table (user)
     - [x] Test koneksi php-mysql
+
+## Part 3
 - [x] CRUD data user
+
+## TODO
 - [] Fungsi log in, log out
+
+
+## Playlist Youtube
+- https://www.youtube.com/playlist?list=PLwgN9n3j8UEgSewAMQqZazcR9BAPw09D1
 
 
 
