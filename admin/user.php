@@ -46,7 +46,9 @@ $db = new Database();
                                         <i class="fas fa-edit"></i>
                                     </a>
                                     
-                                    <a href="#" class="btn btn-danger">
+                                    <a href="delete-user.php?id=<?= $user['id'] ?>" class="btn btn-danger"
+                                        onclick="return confirm('Apakah Anda yakin mau menghapus data ini????')"
+                                    >
                                         <i class="fas fa-trash"></i>
                                     </a>
                                 </td>
