@@ -12,7 +12,7 @@ Just for trial web php and learn git.
 - [x] Develop tampilan table & form Data User
 - [x] Pembuatan Database & table (user)
     - [x] Test koneksi php-mysql
-- [] CRUD data user
+- [x] CRUD data user
 - [] Fungsi log in, log out
 
 
