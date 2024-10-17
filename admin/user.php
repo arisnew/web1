@@ -1,4 +1,12 @@
 <?php
+session_start();
+
+// check apakah sudah login
+if (! isset($_SESSION['username'])) {
+    $_SESSION['error_msg'] = 'Silahkan login terlebih dahulu!';
+    header('Location: login.php');
+    exit();
+}
 include('../template/section_top.php');
 
 // sertakan database

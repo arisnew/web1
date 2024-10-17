@@ -17,8 +17,11 @@ Just for trial web php and learn git.
 ## Part 3
 - [x] CRUD data user
 
+## Part 4
+- [x] Fungsi log in, log out
+
 ## TODO
-- [] Fungsi log in, log out
+- [] Upload ke hosting
 
 
 ## Playlist Youtube

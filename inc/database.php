@@ -35,6 +35,41 @@ class Database
         $hasil = $data->fetch_array(MYSQLI_ASSOC);
         return $hasil;
     }
+
+    function check_login($username, $password)
+    {
+        $result = false;
+        $message = '';
+        $user = [];
+        try {
+            $sql = "SELECT * FROM users WHERE username = ? AND is_active = 1";
+            $stm = $this->con->prepare($sql);
+            $stm->bind_param('s', $username);
+            $stm->execute();
+            $hasil = $stm->get_result();
+            $user = $hasil->fetch_array(MYSQLI_ASSOC);
+        } catch (\Exception $e) {
+            $message = 'Error : ' . $e->getMessage();
+        }
+
+        if (! $user) {
+            $message .= ' Invalid user!';
+            return [$result, $message, $user];
+        }
+
+        // check password
+        if (! password_verify($password, $user['password'])) {
+            $message .= ' Invalid password!';
+            return [$result, $message, $user];
+        }
+
+        // ok
+        $result = true;
+
+
+        return [$result, $message, $user];
+    }
+
 }
 
 
