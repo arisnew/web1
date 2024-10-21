@@ -1,5 +1,6 @@
 <?php
 @session_start();
+include_once('../inc/config.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,7 +13,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Data User</title>
+    <title><?= $page->title ?></title>
 
     <!-- Custom fonts for this template-->
     <link href="../src/sbadmin2/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -34,25 +35,27 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= $page->site_url() ?>">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-check"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">MyApp</div>
+                <div class="sidebar-brand-text mx-3">
+                    <?= $page->get_app_name() ?>
+                </div>
             </a>
 
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item">
-                <a class="nav-link" href="index.html">
+            <li class="nav-item <?= $page->is_active_menu('dashboard') ?>">
+                <a class="nav-link" href="<?= $page->site_url('admin') ?>">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
             
-            <li class="nav-item active">
-                <a class="nav-link" href="user.html">
+            <li class="nav-item <?= $page->is_active_menu('user') ?>">
+                <a class="nav-link" href="<?= $page->site_url('admin/user.php') ?>">
                     <i class="fas fa-fw fa-users"></i>
                     <span>Data User</span>
                 </a>

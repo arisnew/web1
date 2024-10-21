@@ -21,7 +21,7 @@ if ($results[0]) {
     $_SESSION['username'] = $results[2]['id'];
     $_SESSION['full_name'] = $results[2]['full_name'];
     
-    header('Location: user.php');
+    header('Location: index.php');
 } else {
     $_SESSION['error_msg'] = $results[1];
     header('Location: login.php');

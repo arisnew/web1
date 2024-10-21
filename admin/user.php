@@ -1,12 +1,14 @@
 <?php
-session_start();
+include_once('../inc/config.php');
 
-// check apakah sudah login
-if (! isset($_SESSION['username'])) {
-    $_SESSION['error_msg'] = 'Silahkan login terlebih dahulu!';
-    header('Location: login.php');
-    exit();
-}
+// check login
+check_login();
+
+// set page
+$page->set_active_menu('user');
+$page->title = 'Data User';
+
+
 include('../template/section_top.php');
 
 // sertakan database

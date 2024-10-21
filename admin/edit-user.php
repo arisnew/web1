@@ -1,4 +1,9 @@
 <?php
+include_once('../inc/config.php');
+
+// check login
+check_login();
+
 include('../template/section_top.php');
 
 require_once('../inc/database.php');
