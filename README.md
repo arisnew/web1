@@ -1,6 +1,6 @@
 # Seri PHP Basic Banget
 ---
-Just for trial web php and learn git.
+Just for learn web php and git.
 
 ## Part 1
 - [x] Contoh pembuatan mockup / wireframe web app
@@ -20,8 +20,14 @@ Just for trial web php and learn git.
 ## Part 4
 - [x] Fungsi log in, log out
 
-## TODO
-- [] Upload ke hosting
+## Part 5 (end)
+- [x] Upload ke hosting:
+    - Pastikan sudah punya hosting & domain
+    - Export `db` local kita
+    - Upload file source code dari lokal ke hosting menggunakan ftp, misal `FileZilla`
+    - Login ke `cPanel`
+    - Buat `DB` baru, buat `user` DB baru, set akses `user` ke `DB` (set priviledge)
+    - Sesuiakan `config` & koneksi db
 
 
 ## Playlist Youtube
