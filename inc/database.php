@@ -70,6 +70,38 @@ class Database
         return [$result, $message, $user];
     }
 
+    
+    function get_total_user($status = '')
+    {
+        $total = 0;
+
+        $where = '1';
+        // jika spesifik
+        switch ($status) {
+            case 'active':
+                $where = ' is_active = 1 ';
+                break;
+            
+            case 'non-active':
+                $where = ' is_active = 0 ';
+                break;
+            
+            default:
+                # code...
+                break;
+        }
+        
+        try {
+            $data = $this->con->query("SELECT count(id) AS total FROM users WHERE $where");
+            $result = $data->fetch_array(MYSQLI_ASSOC);
+            $total = $result['total'];
+        } catch (\Throwable $th) {
+            //throw $th;
+        }
+        
+        return $total;
+    }
+
 }
 
 

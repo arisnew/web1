@@ -1,4 +1,12 @@
 <?php
+include_once('../inc/config.php');
+
+// check apakah sudah login
+check_login();
+
+$page->set_active_menu('user');
+$page->title = 'Tambah User';
+
 include('../template/section_top.php');
 ?>
 

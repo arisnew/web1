@@ -1,4 +1,8 @@
 <?php
+include_once('../inc/config.php');
+
+// check apakah sudah login
+check_login();
 
 require_once('../inc/database.php');
 

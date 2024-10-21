@@ -1,4 +1,13 @@
 <?php
+include_once('../inc/config.php');
+
+// check apakah sudah login
+check_login();
+
+$page->set_active_menu('user');
+$page->title = 'Edit User';
+
+
 include('../template/section_top.php');
 
 require_once('../inc/database.php');

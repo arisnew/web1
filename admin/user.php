@@ -1,12 +1,13 @@
 <?php
-session_start();
+include_once('../inc/config.php');
 
 // check apakah sudah login
-if (! isset($_SESSION['username'])) {
-    $_SESSION['error_msg'] = 'Silahkan login terlebih dahulu!';
-    header('Location: login.php');
-    exit();
-}
+check_login();
+
+// set parameter
+$page->set_active_menu('user');
+$page->title = 'Data Users';
+
 include('../template/section_top.php');
 
 // sertakan database
@@ -72,7 +73,7 @@ $db = new Database();
                 </tbody>
             </table>
 
-            <a href="add-user.html" class="btn btn-success">
+            <a href="<?= $page->site_url('admin/add-user.php') ?>" class="btn btn-success">
                 <i class="fas fa-plus"></i>
                 Tambah Data
             </a>
